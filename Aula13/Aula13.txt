@@ -1,0 +1,3 @@
+Depurar = revisar o código
+
+Priorizar a criação de métodos para melhor entendimento do código (meetodo de entrada, saída ou entrada e saida)

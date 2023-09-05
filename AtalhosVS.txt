@@ -1,0 +1,6 @@
+Edita characteres iguais: Alt + Shift + .
+
+Formatação: Ctrl + K, Ctrl + D
+
+Comentar: Ctrl + K, Ctrl + C
+

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9D0A2DE-9C0B-43C8-9774-56193F093009}</ProjectGuid>
+    <ProjectGuid>{4F2612F9-8246-4ABB-817C-28F0073392CD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Aula07</RootNamespace>
-    <AssemblyName>Aula07</AssemblyName>
+    <RootNamespace>Lista2_Ex10</RootNamespace>
+    <AssemblyName>Lista2_Ex10</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
