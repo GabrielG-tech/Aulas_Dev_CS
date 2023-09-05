@@ -18,7 +18,8 @@ namespace Lista4_Ex04 {
                 tamLog++;
                 num = LerNumero();
             }
-            MostrarVetor();
+            MostrarVetor(vet, tamLog);
+            CalcularMedia();
         }
 
         public static int LerNumero() {
@@ -29,10 +30,14 @@ namespace Lista4_Ex04 {
             return num;
         }
 
-        public static ? MostrarVetor(int tamLog, vet[]) {
-            for (int i = 0; i < tamLog; i++) {
+        public static void MostrarVetor(int[] vet, int tl) {
+            for (int i = 0; i < tl; i++) {
                 Console.WriteLine(vet[i]);
             }
+        }
+
+        public static void CalcularMedia() {
+            
         }
     }
 }

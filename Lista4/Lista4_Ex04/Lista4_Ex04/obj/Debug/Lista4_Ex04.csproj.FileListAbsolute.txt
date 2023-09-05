@@ -1,0 +1,8 @@
+C:\Users\gabriel.gsouza\Documents\Dev_CSharp\Lista4\Lista4_Ex04\Lista4_Ex04\bin\Debug\Lista4_Ex04.exe.config
+C:\Users\gabriel.gsouza\Documents\Dev_CSharp\Lista4\Lista4_Ex04\Lista4_Ex04\bin\Debug\Lista4_Ex04.exe
+C:\Users\gabriel.gsouza\Documents\Dev_CSharp\Lista4\Lista4_Ex04\Lista4_Ex04\bin\Debug\Lista4_Ex04.pdb
+C:\Users\gabriel.gsouza\Documents\Dev_CSharp\Lista4\Lista4_Ex04\Lista4_Ex04\obj\Debug\Lista4_Ex04.csproj.AssemblyReference.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CSharp\Lista4\Lista4_Ex04\Lista4_Ex04\obj\Debug\Lista4_Ex04.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CSharp\Lista4\Lista4_Ex04\Lista4_Ex04\obj\Debug\Lista4_Ex04.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CSharp\Lista4\Lista4_Ex04\Lista4_Ex04\obj\Debug\Lista4_Ex04.exe
+C:\Users\gabriel.gsouza\Documents\Dev_CSharp\Lista4\Lista4_Ex04\Lista4_Ex04\obj\Debug\Lista4_Ex04.pdb
