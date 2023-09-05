@@ -9,8 +9,6 @@ namespace Lista2_Ex10 {
         static void Main(string[] args) {
             // Ex 10
             int dia, mes, ano;
-            // Alt + Shift + . (Edita characteres iguais)
-            // Ctrl + K, Ctrl + D (Formatar código)
 
             Console.Write("Entre com o dia: ");
             dia = Int32.Parse(Console.ReadLine());

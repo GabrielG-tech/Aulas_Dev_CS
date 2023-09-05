@@ -8,9 +8,18 @@ namespace Lista4_Ex04 {
     internal class Program {
         static void Main(string[] args) {
             const int TAM = 20;
-            const int FIM = 0;
             int[] vet = new int[TAM];
-            int num, tamLog = 0; // Escopo local
+            int tamLog = 0; // Escopo local
+
+            LerNumerosNoVetor(vet, ref tamLog);
+            MostrarVetor(vet, tamLog);
+            double media = CalcularMedia(vet, tamLog);
+            Console.Write("Média = " + media);
+            MostraNumMaiorIgualMed(vet, tamLog, media);
+        }
+        public static int[] LerNumerosNoVetor(int[] vet, ref int talLog) {
+            const int FIM = 0;
+            int num, tamLog = 0;
 
             num = LerNumero();
             while (num != FIM) {
@@ -18,11 +27,18 @@ namespace Lista4_Ex04 {
                 tamLog++;
                 num = LerNumero();
             }
-            MostrarVetor(vet, tamLog);
-            CalcularMedia();
         }
 
-        public static int LerNumero() {
+        public static int MostraNumMaiorIgualMed(int[] vet, int tamLog, double media) {
+            
+            for (int i = 0; i < tamLog; i++) {
+                if (vet[i] >= media) {
+                    Console.WriteLine(vet[i] + " maior ou igual a média");
+                }
+            }
+        }
+
+         public static int LerNumero() {
             int num; // Escopo local
 
             Console.WriteLine("Entre com um número: ");
