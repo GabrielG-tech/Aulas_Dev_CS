@@ -1,0 +1,8 @@
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\bin\Debug\ArquivoCSV.exe.config
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\bin\Debug\ArquivoCSV.exe
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\bin\Debug\ArquivoCSV.pdb
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\ArquivoCSV.csproj.AssemblyReference.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\ArquivoCSV.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\ArquivoCSV.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\ArquivoCSV.exe
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\ArquivoCSV.pdb

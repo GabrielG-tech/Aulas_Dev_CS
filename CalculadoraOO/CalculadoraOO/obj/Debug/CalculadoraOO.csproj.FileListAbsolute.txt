@@ -1,0 +1,8 @@
+C:\Users\lpmaia\Downloads\Manha\CalculadoraOO\CalculadoraOO\bin\Debug\CalculadoraOO.exe.config
+C:\Users\lpmaia\Downloads\Manha\CalculadoraOO\CalculadoraOO\bin\Debug\CalculadoraOO.exe
+C:\Users\lpmaia\Downloads\Manha\CalculadoraOO\CalculadoraOO\bin\Debug\CalculadoraOO.pdb
+C:\Users\lpmaia\Downloads\Manha\CalculadoraOO\CalculadoraOO\obj\Debug\CalculadoraOO.csproj.AssemblyReference.cache
+C:\Users\lpmaia\Downloads\Manha\CalculadoraOO\CalculadoraOO\obj\Debug\CalculadoraOO.csproj.SuggestedBindingRedirects.cache
+C:\Users\lpmaia\Downloads\Manha\CalculadoraOO\CalculadoraOO\obj\Debug\CalculadoraOO.csproj.CoreCompileInputs.cache
+C:\Users\lpmaia\Downloads\Manha\CalculadoraOO\CalculadoraOO\obj\Debug\CalculadoraOO.exe
+C:\Users\lpmaia\Downloads\Manha\CalculadoraOO\CalculadoraOO\obj\Debug\CalculadoraOO.pdb

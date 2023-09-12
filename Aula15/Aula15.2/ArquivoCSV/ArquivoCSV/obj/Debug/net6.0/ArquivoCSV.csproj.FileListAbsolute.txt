@@ -1,0 +1,15 @@
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\ArquivoCSV.csproj.AssemblyReference.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\ArquivoCSV.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\ArquivoCSV.AssemblyInfoInputs.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\ArquivoCSV.AssemblyInfo.cs
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\ArquivoCSV.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\bin\Debug\net6.0\ArquivoCSV.exe
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\bin\Debug\net6.0\ArquivoCSV.deps.json
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\bin\Debug\net6.0\ArquivoCSV.runtimeconfig.json
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\bin\Debug\net6.0\ArquivoCSV.dll
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\bin\Debug\net6.0\ArquivoCSV.pdb
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\ArquivoCSV.dll
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\refint\ArquivoCSV.dll
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\ArquivoCSV.pdb
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\ArquivoCSV.genruntimeconfig.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Aula15\Aula15.2\ArquivoCSV\ArquivoCSV\obj\Debug\net6.0\ref\ArquivoCSV.dll
