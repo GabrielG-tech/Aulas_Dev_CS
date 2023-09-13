@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace Lista4_Ex13 {
+namespace Lista4_Ex12 {
     internal class Program {
         static void Main(string[] args) {
             double[,] notas = { { 5, 7, 4 }, { 5, 6, 7 }, { 3, 5, 2 }, { 4, 5, 6 }, { 8, 9, 7 }, { 2, 6, 4 } };
-            String[] alunos = { "Luiz", "Paulo", "Maria", "Luiza", "Felipe", "Clara"};
 
-            MostrarNotas(alunos, notas);
-            ExibirMediaAlunos(alunos, notas);
+            MostrarNotas(notas);
+            ExibirMediaAlunos(notas);
             ExibirMediaTurma(notas);
         }
 
@@ -20,10 +19,10 @@ namespace Lista4_Ex13 {
                 }
             }
             mediaTurma = soma / (notas.GetLength(0) * notas.GetLength(1));
-            Console.WriteLine("\nMédia da turma = " + FormatarMedia(mediaTurma));
+            Console.WriteLine("\nMédia da turma = " + mediaTurma);
         }
 
-        public static void ExibirMediaAlunos(String[] alunos, double[,] notas) {
+        public static void ExibirMediaAlunos(double[,] notas) {
             double soma, media;
 
             for (int i = 0; i < notas.GetLength(0); i++) {
@@ -32,23 +31,14 @@ namespace Lista4_Ex13 {
                     soma += notas[i, j];
                 }
                 media = soma / notas.GetLength(1);
-                Console.WriteLine("Média do aluno " + alunos[i] +
-                    " = " + FormatarMedia(media));
+                Console.WriteLine("Média do aluno " + (i + 1) + " = " + media);
             }
         }
 
-        public static String FormatarMedia(double media) {
-
-            media = Math.Round(media, 1);
-            String mediaStr = media.ToString("#.#");
-            return mediaStr;
-        }
-
-        public static void MostrarNotas(String[] alunos, double[,] notas) {
+        public static void MostrarNotas(double[,] notas) {
 
             Console.WriteLine("Notas");
             for (int i = 0; i < notas.GetLength(0); i++) {
-                Console.Write(alunos[i] + " ");
                 for (int j = 0; j < notas.GetLength(1); j++) {
                     Console.Write(notas[i, j] + " ");
                 }
