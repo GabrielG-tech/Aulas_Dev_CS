@@ -1,0 +1,8 @@
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_TP3_CS\TP3_CS\TP3_CS_Ex3\bin\Debug\TP3_CS_Ex3.exe.config
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_TP3_CS\TP3_CS\TP3_CS_Ex3\bin\Debug\TP3_CS_Ex3.exe
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_TP3_CS\TP3_CS\TP3_CS_Ex3\bin\Debug\TP3_CS_Ex3.pdb
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_TP3_CS\TP3_CS\TP3_CS_Ex3\obj\Debug\TP3_CS_Ex3.csproj.AssemblyReference.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_TP3_CS\TP3_CS\TP3_CS_Ex3\obj\Debug\TP3_CS_Ex3.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_TP3_CS\TP3_CS\TP3_CS_Ex3\obj\Debug\TP3_CS_Ex3.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_TP3_CS\TP3_CS\TP3_CS_Ex3\obj\Debug\TP3_CS_Ex3.exe
+C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_TP3_CS\TP3_CS\TP3_CS_Ex3\obj\Debug\TP3_CS_Ex3.pdb
