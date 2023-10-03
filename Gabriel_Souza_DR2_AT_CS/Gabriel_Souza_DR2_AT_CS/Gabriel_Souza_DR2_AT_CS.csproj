@@ -4,7 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+<<<<<<< HEAD
     <ProjectGuid>{5489BD27-B592-46E1-8750-62ECC6C040DF}</ProjectGuid>
+=======
+    <ProjectGuid>{420918BB-3BD8-4483-B393-B7CF9CDFEAD2}</ProjectGuid>
+>>>>>>> 126d92ddeb9e8b903d4f62e3176f116585e815da
     <OutputType>Exe</OutputType>
     <RootNamespace>Gabriel_Souza_DR2_AT_CS</RootNamespace>
     <AssemblyName>Gabriel_Souza_DR2_AT_CS</AssemblyName>
