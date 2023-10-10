@@ -7,6 +7,7 @@ namespace Gabriel_Souza_DR2_AT_CS {
     class Program {
         static List<Conta> contas = new List<Conta>();
         private static bool sairDoPrograma = false;
+        private static string NOME_ARQUIVO = "C:\\Users\\Asus\\Documents\\Infnet_Bloco-BackEnd\\C#\\Aulas_Dev_CS\\Gabriel_Souza_DR2_AT_CS\\Gabriel_Souza_DR2_AT_CS\\conta.csv";
 
         static void Main(string[] args) {
             LerContasDoArquivo();
@@ -19,13 +20,13 @@ namespace Gabriel_Souza_DR2_AT_CS {
         }
 
         private static void ExibirMenu() {
-            Console.WriteLine("============ MENU ============");
+            Console.WriteLine("============== MENU ==============");
             Console.WriteLine("[1] - Inclusão de conta");
             Console.WriteLine("[2] - Alteração de saldo");
             Console.WriteLine("[3] - Exclusão de conta");
             Console.WriteLine("[4] - Relatórios gerenciais");
             Console.WriteLine("[5] - Sair do programa");
-            Console.WriteLine("==============================");
+            Console.WriteLine("==================================");
             Console.Write("Escolha uma opção: ");
         }
 
@@ -288,8 +289,8 @@ namespace Gabriel_Souza_DR2_AT_CS {
         }
 
         static void LerContasDoArquivo() {
-            if (File.Exists("contas.csv")) {
-                string[] linhas = File.ReadAllLines("contas.csv");
+            if (File.Exists(NOME_ARQUIVO)) {
+                string[] linhas = File.ReadAllLines(NOME_ARQUIVO);
                 foreach (string linha in linhas) {
                     string[] partes = linha.Split(';');
                     if (partes.Length == 4) {
@@ -312,7 +313,7 @@ namespace Gabriel_Souza_DR2_AT_CS {
         }
 
         static void GravarContasNoArquivo() {
-            using (StreamWriter writer = new StreamWriter("contas.csv")) {
+            using (StreamWriter writer = new StreamWriter(NOME_ARQUIVO)) {
                 foreach (Conta conta in contas) {
                     writer.WriteLine($"{conta.Id};{conta.Nome};{conta.Saldo}");
                 }

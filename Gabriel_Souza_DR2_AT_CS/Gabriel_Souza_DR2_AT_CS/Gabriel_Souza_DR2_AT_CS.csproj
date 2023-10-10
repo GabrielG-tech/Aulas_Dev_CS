@@ -46,7 +46,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Conta.cs" />
     <Compile Include="IConta.cs" />
-    <Compile Include="Rascunho.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
