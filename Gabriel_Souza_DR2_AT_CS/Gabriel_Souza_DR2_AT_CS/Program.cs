@@ -4,300 +4,319 @@ using System.IO;
 using System.Linq;
 
 namespace Gabriel_Souza_DR2_AT_CS {
-    internal class Program {
+    class Program {
         static List<Conta> contas = new List<Conta>();
-        static string arquivoContas = "contas.csv";
+        private static bool sairDoPrograma = false;
 
         static void Main(string[] args) {
-            CarregarContasDoArquivo();
+            LerContasDoArquivo();
 
-            while (true) {
-                Console.WriteLine("MENU:");
-                Console.WriteLine("1 - Inclusão de conta");
-                Console.WriteLine("2 - Alteração de saldo");
-                Console.WriteLine("3 - Exclusão de conta");
-                Console.WriteLine("4 - Relatórios gerenciais");
-                Console.WriteLine("5 - Sair do programa");
+            while (!sairDoPrograma) {
+                ExibirMenu();
+                int escolha = Convert.ToInt32(Console.ReadLine());
+                ProcessarEscolha(escolha);
+            }
+        }
 
-                Console.Write("Escolha uma opção: ");
-                int opcao;
-                if (int.TryParse(Console.ReadLine(), out opcao)) {
-                    switch (opcao) {
-                        case 1:
-                        IncluirConta();
-                        break;
-                        case 2:
-                        AlterarSaldo();
-                        break;
-                        case 3:
-                        ExcluirConta();
-                        break;
-                        case 4:
-                        RelatoriosGerenciais();
-                        break;
-                        case 5:
-                        SalvarContasNoArquivo();
-                        Environment.Exit(0);
-                        break;
-                        default:
-                        Console.WriteLine("Opção inválida. Tente novamente.");
-                        break;
-                    }
-                } else {
-                    Console.WriteLine("Opção inválida. Tente novamente.");
-                }
+        private static void ExibirMenu() {
+            Console.WriteLine("============ MENU ============");
+            Console.WriteLine("[1] - Inclusão de conta");
+            Console.WriteLine("[2] - Alteração de saldo");
+            Console.WriteLine("[3] - Exclusão de conta");
+            Console.WriteLine("[4] - Relatórios gerenciais");
+            Console.WriteLine("[5] - Sair do programa");
+            Console.WriteLine("==============================");
+            Console.Write("Escolha uma opção: ");
+        }
+
+        static void ProcessarEscolha(int escolha) {
+            switch (escolha) {
+                case 1:
+                    IncluirConta();
+                    break;
+                case 2:
+                    AlterarSaldo();
+                    break;
+                case 3:
+                    ExcluirConta();
+                    break;
+                case 4:
+                    GerarRelatorios();
+                    break;
+                case 5:
+                    GravarContasNoArquivo();
+                    sairDoPrograma = true;
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida.");
+                    break;
             }
         }
 
         static void IncluirConta() {
-            Console.WriteLine("Inclusão de conta:");
-            Console.Write("Número da conta: ");
-            int numeroConta;
-            if (!int.TryParse(Console.ReadLine(), out numeroConta) || numeroConta <= 0) {
-                Console.WriteLine("Número da conta inválido.");
+            Console.Write("Digite o número da conta: ");
+            int id = ValidarId();
+
+            if (id <= 0) {
+                Console.WriteLine("Número de conta inválido.");
                 return;
             }
 
-            if (contas.Any(c => c.NumeroConta == numeroConta)) {
-                Console.WriteLine("Essa conta já existe.");
+            if (contas.Any(c => c.Id == id)) {
+                Console.WriteLine("Conta com esse número já existe.");
                 return;
             }
 
-            Console.Write("Nome do correntista: ");
+            Console.Write("Digite o nome do correntista (pelo menos dois nomes): ");
             string nome = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(nome) || !nome.Contains(" ")) {
-                Console.WriteLine("Nome inválido. Deve conter pelo menos nome e sobrenome.");
+
+            if (nome.Split(' ').Length < 2) {
+                Console.WriteLine("Nome inválido. Deve conter pelo menos dois nomes.");
                 return;
             }
 
-            Console.Write("Saldo inicial: ");
-            double saldoInicial;
-            if (!double.TryParse(Console.ReadLine(), out saldoInicial) || saldoInicial < 0) {
+            Console.Write("Digite o saldo inicial: ");
+            double saldo = ValidarSaldo();
+
+            if (saldo < 0) {
                 Console.WriteLine("Saldo inicial inválido.");
                 return;
             }
 
-            Conta novaConta = new Conta(numeroConta, nome, saldoInicial);
-            contas.Add(novaConta);
-            Console.WriteLine("Conta criada com sucesso.");
+            Conta conta = new Conta(id, nome, saldo);
+            contas.Add(conta);
+            Console.WriteLine("Conta criada com sucesso!");
+        }
+
+        static int ValidarId() {
+            int id;
+
+            try {
+                id = Convert.ToInt32(Console.ReadLine());
+            } catch (FormatException) {
+                Console.WriteLine("Número de conta inválido.");
+                return -1;
+            }
+
+            return id;
+        }
+
+        static double ValidarSaldo() {
+            double saldo;
+
+            try {
+                saldo = Convert.ToDouble(Console.ReadLine());
+            } catch (FormatException) {
+                Console.WriteLine("Saldo inicial inválido.");
+                return -1;
+            }
+
+            return saldo;
         }
 
         static void AlterarSaldo() {
-            Console.WriteLine("Alteração de saldo:");
             if (contas.Count == 0) {
-                Console.WriteLine("Não há contas para alterar.");
+                Console.WriteLine("Nenhuma conta cadastrada.");
                 return;
             }
 
-            Console.Write("Número da conta: ");
-            int numeroConta;
-            if (!int.TryParse(Console.ReadLine(), out numeroConta) || numeroConta <= 0) {
-                Console.WriteLine("Número da conta inválido.");
+            Console.Write("Digite o número da conta que deseja alterar o saldo: ");
+            int id = ValidarId();
+
+            if (id <= 0) {
+                Console.WriteLine("Número de conta inválido.");
                 return;
             }
 
-            Conta conta = contas.FirstOrDefault(c => c.NumeroConta == numeroConta);
+            Conta conta = ValidarConta(id);
+
             if (conta == null) {
                 Console.WriteLine("Conta não encontrada.");
                 return;
             }
 
-            Console.Write("Valor a ser creditado ou debitado: ");
-            double valor;
-            if (!double.TryParse(Console.ReadLine(), out valor) || valor <= 0) {
+            Console.Write("Digite o valor do crédito ou débito: ");
+            double valor = ValidarSaldo();
+
+            if (valor <= 0) {
                 Console.WriteLine("Valor inválido.");
                 return;
             }
 
-            Console.Write("Deseja realizar um crédito (C) ou débito (D)? ");
-            char operacao = Console.ReadLine().ToUpper().FirstOrDefault();
-            if (operacao != 'C' && operacao != 'D') {
-                Console.WriteLine("Operação inválida.");
+            Console.WriteLine(" [1] para crédito\n  [2] para débito");
+            Console.Write("Escolha uma das opções acima: ");
+            int opcao = ValidarOpcao();
+
+            if (opcao == -1) {
+                Console.WriteLine("Opção inválida.");
                 return;
             }
 
-            try {
-                if (operacao == 'C')
-                    conta.Creditar(valor);
-                else
+            if (opcao == 1) {
+                conta.Creditar(valor);
+                // Obs: valor:C transforma valor para formato monetario
+                Console.WriteLine($"Crédito de {valor:C} realizado com sucesso.");
+            } else if (opcao == 2) {
+                if (conta.Saldo >= valor) {
                     conta.Debitar(valor);
-
-                Console.WriteLine("Operação concluída.");
-            } catch (SaldoInsuficienteException ex) {
-                Console.WriteLine(ex.Message);
-            }
-        }
-
-        static void ExcluirConta() {
-            Console.WriteLine("Exclusão de conta:");
-            if (contas.Count == 0) {
-                Console.WriteLine("Não há contas para excluir.");
-                return;
-            }
-
-            Console.Write("Número da conta: ");
-            int numeroConta;
-            if (!int.TryParse(Console.ReadLine(), out numeroConta) || numeroConta <= 0) {
-                Console.WriteLine("Número da conta inválido.");
-                return;
-            }
-
-            Conta conta = contas.FirstOrDefault(c => c.NumeroConta == numeroConta);
-            if (conta == null) {
-                Console.WriteLine("Conta não encontrada.");
-                return;
-            }
-
-            if (conta.Saldo != 0) {
-                Console.WriteLine("Não é possível excluir uma conta com saldo diferente de zero.");
-                return;
-            }
-
-            contas.Remove(conta);
-            Console.WriteLine("Conta excluída com sucesso.");
-        }
-
-        static void RelatoriosGerenciais() {
-            Console.WriteLine("Relatórios Gerenciais:");
-            if (contas.Count == 0) {
-                Console.WriteLine("Não há contas para listar.");
-                return;
-            }
-
-            Console.WriteLine("1 - Listar clientes com saldo negativo");
-            Console.WriteLine("2 - Listar clientes com saldo acima de um determinado valor");
-            Console.WriteLine("3 - Listar todas as contas");
-
-            Console.Write("Escolha uma opção: ");
-            int opcao;
-            if (int.TryParse(Console.ReadLine(), out opcao)) {
-                switch (opcao) {
-                    case 1:
-                    ListarClientesComSaldoNegativo();
-                    break;
-                    case 2:
-                    ListarClientesComSaldoAcimaDe();
-                    break;
-                    case 3:
-                    ListarTodasAsContas();
-                    break;
-                    default:
-                    Console.WriteLine("Opção inválida.");
-                    break;
+                    Console.WriteLine($"Débito de {valor:C} realizado com sucesso.");
+                } else {
+                    Console.WriteLine("Saldo insuficiente para realizar o débito.");
                 }
             } else {
                 Console.WriteLine("Opção inválida.");
             }
         }
 
-        static void ListarClientesComSaldoNegativo() {
-            var clientesComSaldoNegativo = contas.Where(c => c.Saldo < 0).ToList();
-            if (clientesComSaldoNegativo.Count == 0) {
-                Console.WriteLine("Não há clientes com saldo negativo.");
+        static int ValidarOpcao() {
+            int opcao;
+
+            try {
+                opcao = Convert.ToInt32(Console.ReadLine());
+            } catch (FormatException) {
+                Console.WriteLine("Opção inválida.");
+                return -1;
+            }
+
+            return opcao;
+        }
+
+        static Conta ValidarConta(int id) {
+            for (int i = 0; i < contas.Count; i++) {
+                if (contas[i].Id == id) {
+                    return contas[i];
+                }
+            }
+            return null;
+        }
+
+        static void ExcluirConta() {
+            if (contas.Count == 0) {
+                Console.WriteLine("Nenhuma conta cadastrada.");
                 return;
             }
 
+            Console.Write("Digite o número da conta que deseja excluir: ");
+            int id = ValidarId();
+
+            if (id <= 0) {
+                Console.WriteLine("Número de conta inválido.");
+                return;
+            }
+
+            Conta conta = ValidarConta(id);
+
+            if (conta == null) {
+                Console.WriteLine("Conta não encontrada.");
+                return;
+            }
+
+            if (conta.Saldo == 0) {
+                contas.Remove(conta);
+                Console.WriteLine("Conta excluída com sucesso.");
+            } else {
+                Console.WriteLine("Não é possível excluir uma conta com saldo diferente de zero.");
+            }
+        }
+
+        static void GerarRelatorios() {
+            if (contas.Count == 0) {
+                Console.WriteLine("Nenhuma conta cadastrada.");
+                return;
+            }
+
+            Console.WriteLine("Opções de relatórios gerenciais:");
+            Console.WriteLine(" [1] Listar clientes com saldo negativo");
+            Console.WriteLine(" [2] Listar clientes com saldo acima de um valor");
+            Console.WriteLine(" [3] Listar todas as contas");
+            Console.Write("Escolha uma opção: ");
+
+            int opcao = ValidarOpcao();
+
+            if (opcao == -1) {
+                Console.WriteLine("Opção inválida.");
+                return;
+            }
+
+            switch (opcao) {
+                case 1:
+                    ListarClientesComSaldoNegativo();
+                    break;
+                case 2:
+                    ListarClientesComSaldoAcimaDe();
+                    break;
+                case 3:
+                    ListarTodasAsContas();
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida.");
+                    break;
+            }
+        }
+
+        static void ListarClientesComSaldoNegativo() {
             Console.WriteLine("Clientes com saldo negativo:");
-            foreach (var conta in clientesComSaldoNegativo) {
-                Console.WriteLine($"{conta.Nome} - Saldo: {conta.Saldo:F2}");
+            foreach (Conta conta in contas) {
+                if (conta.Saldo < 0) {
+                    Console.WriteLine(conta);
+                }
             }
         }
 
         static void ListarClientesComSaldoAcimaDe() {
             Console.Write("Digite o valor mínimo de saldo: ");
-            double valorMinimo;
-            if (!double.TryParse(Console.ReadLine(), out valorMinimo) || valorMinimo < 0) {
-                Console.WriteLine("Valor mínimo inválido.");
+            double valorMinimo = ValidarSaldo();
+
+            if (valorMinimo < 0) {
+                Console.WriteLine("Valor inválido.");
                 return;
             }
 
-            var clientesComSaldoAcimaDe = contas.Where(c => c.Saldo > valorMinimo).ToList();
-            if (clientesComSaldoAcimaDe.Count == 0) {
-                Console.WriteLine($"Não há clientes com saldo acima de {valorMinimo:F2}.");
-                return;
-            }
-
-            Console.WriteLine($"Clientes com saldo acima de {valorMinimo:F2}:");
-            foreach (var conta in clientesComSaldoAcimaDe) {
-                Console.WriteLine($"{conta.Nome} - Saldo: {conta.Saldo:F2}");
+            Console.WriteLine($"Clientes com saldo acima de {valorMinimo:C}:");
+            foreach (Conta conta in contas) {
+                if (conta.Saldo >= valorMinimo) {
+                    Console.WriteLine(conta);
+                }
             }
         }
 
         static void ListarTodasAsContas() {
             Console.WriteLine("Todas as contas:");
-            foreach (var conta in contas) {
-                Console.WriteLine($"{conta.Nome} - Saldo: {conta.Saldo:F2}");
+            foreach (Conta conta in contas) {
+                Console.WriteLine(conta);
             }
         }
 
-        static void CarregarContasDoArquivo() {
-            if (File.Exists(arquivoContas)) {
-                try {
-                    string[] linhas = File.ReadAllLines(arquivoContas);
-                    foreach (string linha in linhas) {
-                        string[] partes = linha.Split(';');
-                        if (partes.Length == 3) {
-                            int numeroConta;
-                            if (int.TryParse(partes[0], out numeroConta) && numeroConta > 0) {
-                                string nome = partes[1];
-                                double saldo;
-                                if (double.TryParse(partes[2], out saldo) && saldo >= 0) {
-                                    contas.Add(new Conta(numeroConta, nome, saldo));
-                                }
-                            }
+        static void LerContasDoArquivo() {
+            if (File.Exists("contas.csv")) {
+                string[] linhas = File.ReadAllLines("contas.csv");
+                foreach (string linha in linhas) {
+                    string[] partes = linha.Split(';');
+                    if (partes.Length == 4) {
+                        int id;
+                        string nome = partes[1];
+                        double saldo;
+
+                        try {
+                            id = Convert.ToInt32(partes[0]);
+                            saldo = Convert.ToDouble(partes[3]);
+
+                            Conta conta = new Conta(id, nome, saldo);
+                            contas.Add(conta);
+                        } catch (FormatException) {
+                            Console.WriteLine("Erro ao ler os dados da conta.");
                         }
                     }
-                } catch (Exception ex) {
-                    Console.WriteLine($"Erro ao carregar contas do arquivo: {ex.Message}");
                 }
             }
         }
 
-        static void SalvarContasNoArquivo() {
-            try {
-                using (StreamWriter writer = new StreamWriter(arquivoContas)) {
-                    foreach (Conta conta in contas) {
-                        writer.WriteLine($"{conta.NumeroConta};{conta.Nome};{conta.Saldo:F2}");
-                    }
+        static void GravarContasNoArquivo() {
+            using (StreamWriter writer = new StreamWriter("contas.csv")) {
+                foreach (Conta conta in contas) {
+                    writer.WriteLine($"{conta.Id};{conta.Nome};{conta.Saldo}");
                 }
-                Console.WriteLine("Contas salvas com sucesso.");
-            } catch (Exception ex) {
-                Console.WriteLine($"Erro ao salvar contas no arquivo: {ex.Message}");
             }
-        }
-    }
-
-    class Conta {
-        public int NumeroConta {
-            get; private set;
-        }
-        public string Nome {
-            get; private set;
-        }
-        public double Saldo {
-            get; private set;
-        }
-
-        public Conta(int numeroConta, string nome, double saldo) {
-            NumeroConta = numeroConta;
-            Nome = nome;
-            Saldo = saldo;
-        }
-
-        public void Creditar(double valor) {
-            Saldo += valor;
-        }
-
-        public void Debitar(double valor) {
-            if (Saldo < valor) {
-                throw new SaldoInsuficienteException("Saldo insuficiente para realizar o débito.");
-            }
-            Saldo -= valor;
-        }
-    }
-
-    class SaldoInsuficienteException: Exception {
-        public SaldoInsuficienteException(string message) : base(message) {
         }
     }
 }

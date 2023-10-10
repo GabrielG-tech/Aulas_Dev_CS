@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\bin\Debug\Gabriel_Souza_DR2_AT_CS.exe.config
 C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\bin\Debug\Gabriel_Souza_DR2_AT_CS.exe
 C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\bin\Debug\Gabriel_Souza_DR2_AT_CS.pdb
@@ -6,13 +5,3 @@ C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\Gabriel_Souza_DR2_A
 C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\obj\Debug\Gabriel_Souza_DR2_AT_CS.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\obj\Debug\Gabriel_Souza_DR2_AT_CS.exe
 C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\obj\Debug\Gabriel_Souza_DR2_AT_CS.pdb
-=======
-C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\bin\Debug\Gabriel_Souza_DR2_AT_CS.exe.config
-C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\bin\Debug\Gabriel_Souza_DR2_AT_CS.exe
-C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\bin\Debug\Gabriel_Souza_DR2_AT_CS.pdb
-C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\obj\Debug\Gabriel_Souza_DR2_AT_CS.csproj.AssemblyReference.cache
-C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\obj\Debug\Gabriel_Souza_DR2_AT_CS.csproj.SuggestedBindingRedirects.cache
-C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\obj\Debug\Gabriel_Souza_DR2_AT_CS.csproj.CoreCompileInputs.cache
-C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\obj\Debug\Gabriel_Souza_DR2_AT_CS.exe
-C:\Users\gabriel.gsouza\Documents\Dev_CS\Gabriel_Souza_DR2_AT_CS\Gabriel_Souza_DR2_AT_CS\obj\Debug\Gabriel_Souza_DR2_AT_CS.pdb
->>>>>>> 126d92ddeb9e8b903d4f62e3176f116585e815da
