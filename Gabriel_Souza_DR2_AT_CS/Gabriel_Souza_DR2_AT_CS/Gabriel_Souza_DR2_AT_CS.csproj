@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRUD.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Conta.cs" />
     <Compile Include="IConta.cs" />
