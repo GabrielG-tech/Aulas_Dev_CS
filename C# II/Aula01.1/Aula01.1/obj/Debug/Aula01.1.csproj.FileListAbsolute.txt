@@ -1,0 +1,8 @@
+C:\Users\gabriel.gsouza\Documents\Dev CS\C# II\Aula01.1\Aula01.1\obj\Debug\Aula01.1.csproj.AssemblyReference.cache
+C:\Users\gabriel.gsouza\Documents\Dev CS\C# II\Aula01.1\Aula01.1\obj\Debug\Aula01.1.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabriel.gsouza\Documents\Dev CS\C# II\Aula01.1\Aula01.1\obj\Debug\Aula01.1.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.gsouza\Documents\Dev CS\C# II\Aula01.1\Aula01.1\bin\Debug\Aula01.1.exe.config
+C:\Users\gabriel.gsouza\Documents\Dev CS\C# II\Aula01.1\Aula01.1\bin\Debug\Aula01.1.exe
+C:\Users\gabriel.gsouza\Documents\Dev CS\C# II\Aula01.1\Aula01.1\bin\Debug\Aula01.1.pdb
+C:\Users\gabriel.gsouza\Documents\Dev CS\C# II\Aula01.1\Aula01.1\obj\Debug\Aula01.1.exe
+C:\Users\gabriel.gsouza\Documents\Dev CS\C# II\Aula01.1\Aula01.1\obj\Debug\Aula01.1.pdb

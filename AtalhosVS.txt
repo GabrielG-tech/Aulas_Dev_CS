@@ -4,3 +4,5 @@ Formatação: Ctrl + K, Ctrl + D
 
 Comentar: Ctrl + K, Ctrl + C
 
+Vá para Todos: Ctrl + T ou Ctrl + ,
+
