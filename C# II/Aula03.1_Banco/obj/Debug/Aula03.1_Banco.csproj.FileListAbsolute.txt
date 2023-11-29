@@ -1,0 +1,7 @@
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula03.1_Banco\bin\Debug\Aula03.1_Banco.exe.config
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula03.1_Banco\bin\Debug\Aula03.1_Banco.exe
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula03.1_Banco\bin\Debug\Aula03.1_Banco.pdb
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula03.1_Banco\obj\Debug\Aula03.1_Banco.csproj.AssemblyReference.cache
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula03.1_Banco\obj\Debug\Aula03.1_Banco.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula03.1_Banco\obj\Debug\Aula03.1_Banco.exe
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula03.1_Banco\obj\Debug\Aula03.1_Banco.pdb
