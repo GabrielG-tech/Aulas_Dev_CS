@@ -1,0 +1,17 @@
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1\Aula05.1\bin\Debug\Aula05.1.exe.config
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1\Aula05.1\bin\Debug\Aula05.1.exe
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1\Aula05.1\bin\Debug\Aula05.1.pdb
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1\Aula05.1\obj\Debug\Aula05.1.csproj.AssemblyReference.cache
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1\Aula05.1\obj\Debug\Aula05.1.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1\Aula05.1\obj\Debug\Aula05.1.exe
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1\Aula05.1\obj\Debug\Aula05.1.pdb
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\bin\Debug\Aula05.1.exe.config
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\bin\Debug\Aula05.1.exe
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\bin\Debug\Aula05.1.pdb
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\obj\Debug\Aula05.1.csproj.AssemblyReference.cache
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\obj\Debug\Aula05.1.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\obj\Debug\Aula05.1.csproj.CopyComplete
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\obj\Debug\Aula05.1.exe
+C:\Users\Asus\Documents\Infnet_Bloco-BackEnd\C#\Aulas_Dev_CS\C# II\Aula05.1_Banco-SQLv2\Aula05.1\obj\Debug\Aula05.1.pdb
