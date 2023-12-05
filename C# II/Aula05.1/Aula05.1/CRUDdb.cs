@@ -23,7 +23,46 @@ namespace Aula05._1 {
             }
         }
 
-        public static List<Conta> ConsultarContas() {
+        public static Conta ConsultarConta(int id) {
+            string sql = "SELECT * FROM contas WHERE id = @id";
+            Conta conta = null;
+
+            using (var conn = new SqlConnection(connectionString)) {
+                try {
+                    conn.Open();
+                    var cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.Add(new SqlParameter("@id", id));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read()) {
+                        int idConta = int.Parse(dr["id"].ToString());
+                        string nome = dr["nome"].ToString();
+                        double saldo = double.Parse(dr["saldo"].ToString());
+                        conta = new Conta(idConta, nome, saldo);
+                    }
+                    dr.Close();
+                } catch (SqlException ex) {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            return conta;
+        }
+
+        public static void Excluir(Conta conta) {
+            string sql = "DELETE FROM contas WHERE id = @id";
+
+            using (var conn = new SqlConnection(connectionString)) {
+                try {
+                    conn.Open();
+                    var cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.Add(new SqlParameter("@id", conta.Id));
+                    cmd.ExecuteNonQuery();
+                } catch (SqlException ex) {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+
+            public static List<Conta> ConsultarContas() {
             string sql = "SELECT * FROM contas";
             List<Conta> contas = new List<Conta>();
 

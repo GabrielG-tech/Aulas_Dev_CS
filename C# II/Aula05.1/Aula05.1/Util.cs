@@ -13,7 +13,7 @@ namespace Aula05._1 {
                     num = int.Parse(Console.ReadLine());
                     break;
                 } catch (Exception e) {
-                    Console.WriteLine("Erro: valor inválido");
+                    Console.WriteLine("Erro: valor inválido - " + e);
                 }
             } while (true);
             return num;
