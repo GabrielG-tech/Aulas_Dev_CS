@@ -1,14 +1,13 @@
 ﻿using System;
 using static Aula04._1.CRUD;
-using static Aula04._1.Teste;
 using System.Data.SqlClient;
-using static System.Net.Mime.MediaTypeNames;
-using System.Runtime.Remoting.Contexts;
+
 namespace Aula04._1 {
     namespace Banco {
         public class Program {
 
-            const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BancoAT;Integrated Security=True;Connect Timeout=30;Encrypt=False"; // Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False
+            const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BancoAT;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
+
             static void Main(string[] args) {
                 ConsultarContas();
             }
@@ -26,14 +25,12 @@ namespace Aula04._1 {
                             int id = int.Parse(dr["Id"].ToString());
                             string nome = dr["Nome"].ToString();
                             double saldo = double.Parse(dr["Saldo"].ToString());
-
                             Conta conta = new Conta(id, nome, saldo);
                             Console.WriteLine(conta);
                         }
-
                         dr.Close();
                     } catch (Exception ex) {
-
+                        Console.WriteLine("Erro: Problema no Banco de Dados " + ex.Message);
                     }
                 }
             }

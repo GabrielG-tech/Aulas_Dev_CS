@@ -12,12 +12,10 @@ namespace Aula04._1 {
                     Console.Write(msg);
                     num = int.Parse(Console.ReadLine());
                     break;
-
                 } catch (Exception e) {
                     Console.WriteLine("Erro: valor inválido");
                 }
             } while (true);
-
             return num;
         }
 

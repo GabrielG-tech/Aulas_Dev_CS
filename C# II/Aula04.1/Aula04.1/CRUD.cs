@@ -19,7 +19,6 @@ namespace Aula04._1 {
         }
 
         public static void ExibirContas(List<Conta> contas) {
-
             foreach (Conta conta in contas) {
                 Console.WriteLine(conta);
             }
