@@ -15,10 +15,12 @@ namespace Aula04._1 {
             }
             string nome = LerNome();
             double saldo = LerSaldo();
-            contas.Add(new Conta(id, nome, saldo));
+            Conta conta = new Conta(id, nome, saldo);
+
         }
 
         public static void ExibirContas(List<Conta> contas) {
+
             foreach (Conta conta in contas) {
                 Console.WriteLine(conta);
             }

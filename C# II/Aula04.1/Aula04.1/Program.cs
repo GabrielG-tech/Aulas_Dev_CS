@@ -1,6 +1,7 @@
 ﻿using System;
 using static Aula04._1.CRUD;
 using System.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace Aula04._1 {
     namespace Banco {
@@ -30,7 +31,7 @@ namespace Aula04._1 {
                         }
                         dr.Close();
                     } catch (Exception ex) {
-                        Console.WriteLine("Erro: Problema no Banco de Dados " + ex.Message);
+                        Console.WriteLine("Erro: Problema no Banco de Dados - " + ex.Message);
                     }
                 }
             }

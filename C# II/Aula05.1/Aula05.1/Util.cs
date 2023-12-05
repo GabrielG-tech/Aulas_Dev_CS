@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Aula04._1 {
+namespace Aula05._1 {
     public class Util {
 
         public static int EntrarInteiro(string msg) {
@@ -13,7 +13,7 @@ namespace Aula04._1 {
                     num = int.Parse(Console.ReadLine());
                     break;
                 } catch (Exception e) {
-                    Console.WriteLine("Erro: valor inválido - " + e);
+                    Console.WriteLine("Erro: valor inválido");
                 }
             } while (true);
             return num;
@@ -41,11 +41,13 @@ namespace Aula04._1 {
             string nome = Console.ReadLine();
             return nome;
         }
+
         public static double LerSaldo() {
             Console.Write("Entre com o saldo: ");
             double saldo = double.Parse(Console.ReadLine());
             return saldo;
         }
+
         public static bool PesquisarConta(List<Conta> contas, int id) {
             bool achou = false;
             foreach (Conta conta in contas) {
