@@ -1,0 +1,50 @@
+﻿@page "/"
+@using BancoWebApp.Models;
+@model IndexModel
+@{
+
+    ViewData["Title"] = "Início";
+}
+
+<h1>Banco</h1>
+
+<p>
+    <a asp-page="Create">Criar conta</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Contas[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contas[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contas[0].Saldo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var conta in Model.Contas) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => conta.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => conta.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => conta.Saldo)
+                </td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@conta.Id">Editar</a> |
+                    <a asp-page="Details" asp-route-id="@conta.Id">Detathes</a> |
+                    <a asp-page="Delete" asp-route-id="@conta.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

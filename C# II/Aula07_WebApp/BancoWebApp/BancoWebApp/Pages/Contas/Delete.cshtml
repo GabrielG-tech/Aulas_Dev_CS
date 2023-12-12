@@ -1,0 +1,37 @@
+﻿@page
+@model BancoWebApp.Pages.Contas.DeleteModel
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1>Excluir</h1>
+
+<div>
+    <h4>Conta</h4>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Conta.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Conta.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Conta.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Conta.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Conta.Saldo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Conta.Saldo)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Conta.Id"/>
+        <input type="submit" value="Excluir" class="btn btn-danger"/> |
+        <a asp-page="Index">Voltar</a>
+    </form>
+</div>

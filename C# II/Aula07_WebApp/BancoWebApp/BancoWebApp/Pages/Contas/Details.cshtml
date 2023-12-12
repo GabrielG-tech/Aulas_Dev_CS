@@ -1,0 +1,36 @@
+﻿@page
+@model BancoWebApp.Pages.Contas.DetailsModel
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Conta</h4>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Conta.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Conta.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Conta.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Conta.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Conta.Saldo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Conta.Saldo)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <a asp-page="Edit" asp-route-id="@Model.Conta.Id">Editar</a>
+        <a asp-page="Index">Voltar</a>
+    </form>
+</div>
