@@ -22,11 +22,17 @@ namespace InfnetMVC.Controllers
         }
 
         // GET: Alunos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string BuscaNome)
         {
-              return _context.Aluno != null ? 
-                          View(await _context.Aluno.ToListAsync()) :
-                          Problem("Entity set 'InfnetDbContext.Aluno'  is null.");
+            List<Aluno> alunos;
+
+            if (string.IsNullOrEmpty(BuscaNome)) {
+                alunos = _context.Aluno.ToList();
+            }
+            else {
+                alunos = _context.Aluno.Where(p => p.Nome.Contains(BuscaNome)).ToList();
+            }
+              return View(alunos);
         }
 
         // GET: Alunos/Details/5
